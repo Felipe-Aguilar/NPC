@@ -1,0 +1,84 @@
+.News{
+    width: 80%;
+    padding: 120px 0;
+    margin: auto;
+    display: flex;
+
+    @media (width <= 600px) {
+        width: 85%;
+    }
+
+    .NewContainer{
+        width: 100%;
+        display: block;
+        height: 700px;
+        padding: 40px;
+        cursor: pointer;
+        text-transform: uppercase;
+        position: relative;
+
+        @media (width <= 650px) {
+            height: 500px;
+        }
+        @media (width <= 500px) {
+            height: 350px;
+        }
+    }
+
+    .New1{
+        background: url('../../public/imagenes/News-banner-1.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .New2{
+        background: url('../../public/imagenes/News-banner-2.webp');
+        color: #fff!important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .Icon{
+        background: #fff;
+        color: #000;
+        max-width: fit-content;
+        padding: 15px;
+        border-radius: 100%;
+        position: absolute;
+        bottom: 60px;
+        right: 60px;
+        z-index: 1;
+
+        @media (width <= 600px) {
+            
+        }
+
+        svg{
+            font-size: 1.5rem;
+        }
+    }
+
+    .NewsInfoContainer{
+        width: 70%;
+        // height: 200px;
+        background: #fff;
+        color: #000;
+        padding: 20px;
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        z-index: 0;
+        
+        // transition: bottom 0.3s ease;
+
+        span{
+            color: #727272;
+            font-size: 0.8rem;
+        }
+    }
+
+    // .NewContainer:hover .NewsInfoContainer{
+    //     bottom: 0;
+    // }
+}

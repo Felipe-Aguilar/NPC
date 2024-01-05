@@ -1,0 +1,90 @@
+.newProducts{
+    width: 80%;
+    margin: auto;
+
+    .TitleNews{
+        text-align: center;
+        text-transform: uppercase;
+
+        span{
+            color: #727272;
+            font-size: 0.8rem;
+        }
+
+        h2{
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+    }
+
+    .Navigation{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        button{
+            background: transparent;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all .3s ease;
+
+            &:hover{
+                border-bottom: 2px solid;
+            }
+        }
+    }
+
+    .ProductsGrid{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        
+        .ContainerProduct{
+            outline: 1px solid #d9d9d9;
+            padding: 20px;
+
+            .Head{
+                display: flex;
+                justify-content: space-between;
+                justify-content: end;
+                align-items: center;
+                
+                .ButtonContainer{
+                    
+                    button{
+                        padding: 15px;
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        background: transparent;
+                        border: none;
+                        transition: all .3s ease-out;
+                        
+                        svg{
+                            font-size: 1.2rem;
+                        }
+
+                        &:hover{
+                            background: #000;
+
+                            svg{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            a{
+                display: block;
+                width: 100%;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
