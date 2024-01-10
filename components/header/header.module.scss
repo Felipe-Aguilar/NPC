@@ -7,7 +7,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
-    z-index: 9999;
+    z-index: 200;
 
     position: absolute;
     top: 0;
@@ -24,6 +24,10 @@
         display: flex;
         gap: 50px;
 
+        @media (width <= 700px) {
+            display: none;
+        }
+
         a{
             transition: all .3s ease;
             border-bottom: 2px solid transparent;
@@ -33,13 +37,64 @@
             }
         }
     }
-    
+
+    .Other{
+        @media (width <= 700px) {
+            display: none;
+        }
+    }
+
+    .MobileMenu{
+        display: none;
+
+        @media (width <= 700px) {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            svg{
+                font-size: 1.5rem;
+            }
+        }
+
+        .Menu{
+            width: 50px;
+            background: transparent;
+            outline: none!important;
+            border: transparent;
+
+            svg{
+                font-size: 1.5rem;
+                color: #fff;
+            }
+        }
+
+        .ContainerMenu{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 500;
+            left: 0;
+            top:77px;
+            background: #fff;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+    }
 }
 
 .Header{
     position: sticky;
-    top: 20px;
+    top: 0px;
     color: #000;
-
     box-shadow: 0 5px 10px 0 rgba(1,1,1,.1);
+    background: #fff;
+
+    .MobileMenu{
+        .Menu{
+            svg{
+                color: #000;
+            }
+        }
+    }
 }

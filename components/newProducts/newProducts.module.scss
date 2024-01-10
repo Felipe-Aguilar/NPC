@@ -2,6 +2,10 @@
     width: 80%;
     margin: auto;
 
+    @media (width <= 700px) {
+        width: 87%;
+    }
+
     .TitleNews{
         text-align: center;
         text-transform: uppercase;
@@ -39,19 +43,93 @@
     .ProductsGrid{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        
-        .ContainerProduct{
-            outline: 1px solid #d9d9d9;
-            padding: 20px;
 
-            .Head{
-                display: flex;
-                justify-content: space-between;
-                justify-content: end;
-                align-items: center;
-                
-                .ButtonContainer{
+        @media (width <= 700px) {
+            grid-template-columns: 100%;
+        }
+
+        .Border{
+            border: 1px solid #d9d9d9;
+            outline: 1px solid #fff;
+            
+            .ContainerProduct{
+                outline: 2px solid transparent;
+                padding: 20px;
+                position: relative;
+                transition: outline .5s all;
+                transition: all .5s ease;
+    
+                &:hover{
+                    outline: 2px solid #000;
+                }
+    
+                .Head{
+                    display: flex;
+                    justify-content: space-between;
+                    justify-content: end;
+                    align-items: center;
                     
+                    .ButtonContainer{
+                        
+                        button{
+                            padding: 15px;
+                            border-radius: 100%;
+                            display: flex;
+                            align-items: center;
+                            background: transparent;
+                            border: none;
+                            transition: all .3s ease-out;
+                            
+                            svg{
+                                font-size: 1.2rem;
+                            }
+    
+                            &:hover{
+                                background: #000;
+    
+                                svg{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                a{
+                    display: block;
+                    width: 100%;
+    
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+    
+                .Info{
+                    // padding: 20px 0 0 0;
+    
+                    a{
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+    
+                        span{
+                            
+                            font-size: 0.8rem;
+                            color: #727272;
+                            font-weight: 400;
+                        }
+                    }
+                    span{
+                        font-weight: 500;
+                    }
+                }
+    
+                .Bag{
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+    
                     button{
                         padding: 15px;
                         border-radius: 100%;
@@ -64,10 +142,10 @@
                         svg{
                             font-size: 1.2rem;
                         }
-
+        
                         &:hover{
                             background: #000;
-
+        
                             svg{
                                 color: #fff;
                             }
@@ -75,16 +153,7 @@
                     }
                 }
             }
-
-            a{
-                display: block;
-                width: 100%;
-
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-            }
         }
+        
     }
 }

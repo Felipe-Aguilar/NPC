@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from './header.module.scss';
+import { BsSearch } from "react-icons/bs";
+import { FaBars } from "react-icons/fa";
+import MenuMobile from "./MenuMobile";
 
 const HeaderSticky = () => {
     return ( 
@@ -30,6 +33,15 @@ const HeaderSticky = () => {
                 <span>
                     cart (0)
                 </span>
+            </div>
+
+            <div className={styles.MobileMenu}>
+                <Link href={'/'}>
+                    <BsSearch />
+                </Link>
+
+                
+                <MenuMobile />
             </div>
         </header>
     );

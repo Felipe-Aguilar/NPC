@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from './header.module.scss';
+import { BsSearch } from "react-icons/bs";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
 
@@ -31,6 +33,16 @@ const Header = () => {
                 <span>
                     cart (0)
                 </span>
+            </div>
+
+            <div className={styles.MobileMenu}>
+                <Link href={'/'}>
+                    <BsSearch />
+                </Link>
+
+                <button className={styles.Menu}>
+                    <FaBars />
+                </button>
             </div>
         </header>
     );

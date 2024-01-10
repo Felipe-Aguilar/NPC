@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './newProducts.module.scss';
 import Link from 'next/link';
 
-import { BsHeart } from "react-icons/bs";
+import { BsBag, BsHeart } from "react-icons/bs";
 
 const NewProducts = () => {
 
@@ -30,24 +30,45 @@ const NewProducts = () => {
             <div className={styles.ProductsGrid}>
                 { Products.map((product)=>(
 
-                    <div key={product.id} className={styles.ContainerProduct}>
-
-                        <div className={styles.Head}>
-
-                            <div className={styles.ButtonContainer}>
-                                <button><BsHeart /></button>
-                            </div>
-                        </div>
+                    <div key={product.id} className={styles.Border}>
                         
-                        <Link href={'/'}>
-                            <Image 
-                                src={'/imagenes/PlayeraDemo.jpeg'}
-                                alt='Playera de EDM'
-                                width={1080}
-                                height={1080}
-                            />
-                        </Link>
-                        <span>{product.category}</span>
+                        <div className={styles.ContainerProduct}>
+
+                            <div className={styles.Head}>
+
+                                <div className={styles.ButtonContainer}>
+                                    <button><BsHeart /></button>
+                                </div>
+                            </div>
+                            
+                            <Link href={'/'}>
+                                <Image 
+                                    src={'/imagenes/PlayeraDemo.png'}
+                                    alt='Playera de EDM'
+                                    width={1080}
+                                    height={1080}
+                                />
+                            </Link>
+
+                            <div className={styles.Info}>
+                                <Link href={'/'}>
+                                    <span>{product.category}</span>                
+                                </Link>
+
+                                <Link href={'/'}>
+                                    {product.name}
+                                </Link>
+
+                                <span>{`$ ${product.price}`}</span>
+                            </div>
+
+                            <div className={styles.Bag}>
+                                <button>
+                                    <BsBag />
+                                </button>
+                            </div>
+
+                        </div>
                     </div>
 
                 ))
