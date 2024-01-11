@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from './header.module.scss';
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
+import MenuMobile from "./MenuMobile";
 
 const Header = () => {
 
@@ -40,9 +41,7 @@ const Header = () => {
                     <BsSearch />
                 </Link>
 
-                <button className={styles.Menu}>
-                    <FaBars />
-                </button>
+                <MenuMobile />
             </div>
         </header>
     );

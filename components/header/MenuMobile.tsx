@@ -3,13 +3,21 @@
 import styles from './header.module.scss';
 import { FaBars } from "react-icons/fa";
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsXLg } from 'react-icons/bs';
 import Link from 'next/link';
 
 const MenuMobile = () => {
 
     const [open, setOpen] = useState(false);
+
+    useEffect(()=>{
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        }else{
+            document.body.style.overflow = 'auto';
+        }
+    },[open]);
 
     return ( 
         <div>
