@@ -25,8 +25,6 @@ const MenuMobile = () => {
                 { open && (
                     <motion.div 
                         className={styles.ContainerMenu}
-                        // initial={{scaleY: 0}}
-                        // animate={{scaleY: [0, 1]}}
                         initial={{height: 0}}
                         animate={{height: '100vh'}}
                         exit={{height: 0}}
