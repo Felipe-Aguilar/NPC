@@ -77,8 +77,18 @@
             left: 0;
             top:77px;
             background: #fff;
-            padding: 20px;
-            overflow-x: hidden;
+            padding: 40px 20px;
+            color: #000;
+
+            display: flex;
+            flex-direction: column;
+            > * + * {
+                margin-top: 10px;
+            }
+
+            a{
+                z-index: 1;
+            }
         }
     }
 }

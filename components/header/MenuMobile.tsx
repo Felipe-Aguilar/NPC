@@ -11,12 +11,6 @@ const MenuMobile = () => {
 
     const [open, setOpen] = useState(false);
 
-    const Animation = {
-        initial: {x:0},
-        animate: {x:1},
-        exit: {x:0}
-    }
-
     return ( 
         <div>
             <button className={styles.Menu} onClick={()=>setOpen(!open)}>
@@ -29,9 +23,25 @@ const MenuMobile = () => {
 
             <AnimatePresence>
                 { open && (
-                    <motion.div {...Animation} className={styles.ContainerMenu}>
+                    <motion.div 
+                        className={styles.ContainerMenu}
+                        // initial={{scaleY: 0}}
+                        // animate={{scaleY: [0, 1]}}
+                        initial={{height: 0}}
+                        animate={{height: '100vh'}}
+                        exit={{height: 0}}
+                    >
+                        <Link href={'/'}>
+                            Home
+                        </Link>
                         <Link href={'/'}>
                             Tienda
+                        </Link>
+                        <Link href={'/'}>
+                            Blog
+                        </Link>
+                        <Link href={'/'}>
+                            Contacto
                         </Link>
                     </motion.div>
                 )}
