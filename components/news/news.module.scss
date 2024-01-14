@@ -5,7 +5,8 @@
     display: flex;
 
     @media (width <= 600px) {
-        width: 85%;
+        width: 87%;
+        padding: 100px 0;
     }
 
     .NewContainer{
@@ -16,6 +17,10 @@
         cursor: pointer;
         text-transform: uppercase;
         position: relative;
+
+        @media (width <= 700px) {
+            padding: 30px;
+        }
 
         @media (width <= 650px) {
             height: 500px;
@@ -50,8 +55,9 @@
         right: 60px;
         z-index: 1;
 
-        @media (width <= 600px) {
-            
+        @media (width <= 700px) {
+            bottom: 50px;
+            right: 50px;
         }
 
         svg{
@@ -70,15 +76,14 @@
         right: 40px;
         z-index: 0;
         
-        // transition: bottom 0.3s ease;
+        @media (width <= 700px) {
+            bottom: 30px;
+            right: 30px;
+        }
 
         span{
             color: #727272;
             font-size: 0.8rem;
         }
     }
-
-    // .NewContainer:hover .NewsInfoContainer{
-    //     bottom: 0;
-    // }
 }

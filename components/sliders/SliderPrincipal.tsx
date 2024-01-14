@@ -22,7 +22,16 @@ const SliderPrincipal = () => {
         slidesToScroll: 1,
         autoplaySpeed: 5000,
         prevArrow: <BsArrowLeftShort />,
-        nextArrow: <BsArrowRightShort />
+        nextArrow: <BsArrowRightShort />,
+
+        responsive: [
+            {
+            breakpoint: 700,
+                settings: {
+                    arrows: false
+                }
+            },
+        ]
     };
 
     const animation = {
@@ -37,7 +46,7 @@ const SliderPrincipal = () => {
                     <motion.div {...animation} whileInView={{opacity: 1, y:0}}>
                         <h1>
                             Se un NPC del edm<br/>
-                            <span>Playeras Inspiradas en los Mejores DJ&#39s del Mundo</span>
+                            <span>Playeras Inspiradas en los Mejores DJ&apos;s del Mundo</span>
                         </h1>
                         <Link href={'#'}>
                             Compra ahora
@@ -51,7 +60,7 @@ const SliderPrincipal = () => {
                     <motion.div {...animation} whileInView={{opacity: 1, y:0}}>
                         <h1>
                             Baila con Estilo<br/>
-                            <span>Descubre Nuestras Playeras Únicas de DJ&#39s</span>
+                            <span>Descubre Nuestras Playeras Únicas de DJ&apos;s</span>
                         </h1>
                         <Link href={'#'}>
                             Ver más
