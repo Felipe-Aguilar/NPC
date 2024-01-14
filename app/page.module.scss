@@ -1,4 +1,61 @@
 .Main{
 
-    
+    .Ocasion{
+        width: 100%;
+        padding: 120px 0;
+        display: flex;
+
+        @media (width <= 700px) {
+            padding: 100px 0;
+        }
+
+        div{
+            width: 50%;
+            @media (width <= 700px) {
+                width: 100%;
+            }
+        }
+
+        @media (width <= 700px) {
+            flex-direction: column;
+        }
+
+        .Img{
+            background: url('../public/imagenes/Ocasion.webp');
+            background-size: cover;
+            background-position: center center;
+
+            @media (width <= 700px) {
+                height: 400px;
+            }
+        }
+
+        .Text{
+            background: url('../public/imagenes/FondoOcasion.webp');
+            background-position: cover;
+            padding: 100px 60px;
+            color: #fff;
+            text-transform: uppercase;
+
+            @media (width <= 700px) {
+                padding: 100px 40px;
+            }
+
+            a{
+                display: inline-block;
+                margin-top: 20px;
+                border: 2px solid #fff;
+                padding: 20px 40px;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+                font-weight: 700;
+                padding: 10px 20px;
+
+                &:hover{
+                    background: #fff;
+                    color: #000!important;
+                }
+            }
+        }
+    }
 }

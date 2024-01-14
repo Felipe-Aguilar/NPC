@@ -12,6 +12,9 @@ const NewProducts = () => {
         {id: 3, name: 'Playera 3', category: 'Malaa', price: '45', image: ''},
         {id: 4, name: 'Playera 4', category: 'Malaa', price: '45', image: ''},
         {id: 5, name: 'Playera 5', category: 'Malaa', price: '45', image: ''},
+        {id: 6, name: 'Playera 5', category: 'Malaa', price: '45', image: ''},
+        {id: 7, name: 'Playera 5', category: 'Malaa', price: '45', image: ''},
+        {id: 8, name: 'Playera 5', category: 'Malaa', price: '45', image: ''},
     ]
 
     return ( 
