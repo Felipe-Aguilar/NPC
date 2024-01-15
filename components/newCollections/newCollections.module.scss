@@ -38,6 +38,12 @@
                 width: 100%;
             }
 
+            .Overlay{
+                background: red;
+                display: block;
+                width: 100%;
+            }
+
             .Image{
                 padding: 40px;
                 background-position: center center!important;
@@ -62,21 +68,21 @@
                     }
                     h4{
                         font-weight: 800;
-                        color: #fff;
                     }
                 }
 
             }
 
-            // .First{
-
-            // }
+            .First{
+                background: url('../../public/imagenes/BannerColeccionesEric.webp');
+            }
             .Second{
                 background: url('../../public/imagenes/Edc2024.jpg');
+                color: #fff;
             }
-            // .Third{
-
-            // }
+            .Third{
+                background: url('../../public/imagenes/BannerColeccionesKnife.webp');
+            }
         }
     }
 }

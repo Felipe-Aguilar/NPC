@@ -13,15 +13,17 @@ const NewCollections = () => {
                     <div className={`${styles.Image} ${styles.First}`}>          
                         <div className={styles.Text}>
                             <span>Colección</span>
-                            <h4>Avicci</h4>
+                            <h4>Eric Prydz</h4>
                         </div>
                     </div>
                 </div>
                 <div className={styles.Collection}>
-                    <div className={`${styles.Image} ${styles.Second}`}>          
-                        <div className={styles.Text}>
-                            <span>Colección</span>
-                            <h4>EDC México 2024</h4>
+                    <div className={styles.Overlay}>
+                        <div className={`${styles.Image} ${styles.Second}`}>          
+                            <div className={styles.Text}>
+                                <span>Colección</span>
+                                <h4>EDC México 2024</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
