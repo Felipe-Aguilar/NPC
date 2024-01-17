@@ -1,6 +1,7 @@
 .NewCollections{
     width: 80%;
     margin: auto;
+    padding-bottom: 120px;
 
     @media (width <= 700px) {
         width: 87%;
@@ -24,31 +25,32 @@
     .Collections{
         display: flex;
         margin-top: 40px;
+        outline: 1px solid transparent;
+        border: 1px solid #d9d9d9;
+        overflow: hidden;
+        height: 650px;
 
         @media (width <= 700px) {
             flex-direction: column;
+            height: auto;
         }
 
         .Collection{
-            width: 33.3%;
+            width: 33.33333333333333%;
             text-transform: uppercase;
             cursor: pointer;
 
             @media (width <= 700px) {
                 width: 100%;
-            }
-
-            .Overlay{
-                background: red;
-                display: block;
-                width: 100%;
+                max-height: 500px;
+                // overflow: hidden;
             }
 
             .Image{
                 padding: 40px;
                 background-position: center center!important;
                 background-size: cover!important;
-                height: 650px;
+                height: 100%;
                 position: relative;
 
                 @media (width <= 700px) {
@@ -73,12 +75,36 @@
 
             }
 
+            .Explore{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+
+                span{
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size: 0.9rem;
+                }
+                svg{
+                    font-weight: 900;
+                    font-size: 2rem;
+                }
+            }
+
             .First{
                 background: url('../../public/imagenes/BannerColeccionesEric.webp');
             }
             .Second{
                 background: url('../../public/imagenes/Edc2024.jpg');
+                background: url('../../public/imagenes/Edc2024edit.jpg');
                 color: #fff;
+
+                .Text{
+                    span{
+                        color: #cfcfcf;
+                    }
+                }
             }
             .Third{
                 background: url('../../public/imagenes/BannerColeccionesKnife.webp');
