@@ -1,7 +1,6 @@
 .NewCollections{
     width: 80%;
     margin: auto;
-    padding-bottom: 120px;
 
     @media (width <= 700px) {
         width: 87%;
@@ -43,7 +42,6 @@
             @media (width <= 700px) {
                 width: 100%;
                 max-height: 500px;
-                // overflow: hidden;
             }
 
             .Image{
