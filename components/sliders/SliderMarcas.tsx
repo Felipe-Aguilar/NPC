@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import styles from './marcas.module.scss';
 import Slider from 'react-slick';
+import Link from 'next/link';
 
 const Marcas = [
     {name: 'Eptic', image: '/imagenes/Eptic.svg', alt:'Eptic Logotipo'},
@@ -25,28 +26,43 @@ const SliderMarcas = () => {
         dots: false,
         arrows: false,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 6
+        slidesToScroll: 6,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    // dots: true
+                }
+            },
+        ]
     }
 
     return ( 
         <div className={styles.SliderMarcas}>
-            <div className={styles.Slide}>
-                <Slider {...settings}>
-                    { Marcas.map((marca)=>(
-                        <div key={marca.name} className={styles.Container}>
-                            <Image 
-                                src={marca.image}
-                                width={900}
-                                height={900}
-                                alt={marca.image}
-                            />
-                        </div>
-                    ))
-                    }
-                </Slider>
-            </div>
+            <Link href={'/'}>
+                <div className={styles.Slide}>
+                    <Slider {...settings}>
+                        { Marcas.map((marca)=>(
+                            <div key={marca.name} className={styles.Container}>
+                                <Image 
+                                    src={marca.image}
+                                    width={900}
+                                    height={900}
+                                    alt={marca.image}
+                                />
+                            </div>
+                        ))
+                        }
+                    </Slider>
+                </div>
+            </Link>
         </div>
     );
 }

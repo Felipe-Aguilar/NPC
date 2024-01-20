@@ -6,6 +6,7 @@
 
     @media (width <= 700px) {
         width: 87%;
+        padding: 100px 0;
     }
 
     .Slide{
@@ -19,6 +20,12 @@
             height: 160px;
             padding: 0 40px;
             border: 1px solid #d9d9d9;
+            outline: 1px solid #fff;
+
+            @media (width <= 700px) {
+                flex-direction: column!important;
+                padding: 0 5px;
+            }
 
             img{
                 width: 100%;
