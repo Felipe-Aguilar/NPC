@@ -7,6 +7,8 @@ import Link from 'next/link';
 import News from '@/components/news/News';
 import NewProducts from '@/components/newProducts/NewProducts';
 import NewCollections from '@/components/newCollections/NewCollections';
+import SliderMarcas from '@/components/sliders/SliderMarcas';
+
 
 
 export default function Home() {
@@ -38,6 +40,8 @@ export default function Home() {
       </div>
 
       <NewCollections />
+
+      <SliderMarcas />
 
     </main>
   )
