@@ -1,0 +1,61 @@
+.Trending{
+    width: 80%;
+    margin: auto;
+
+    @media (width <= 700px) {
+        width: 87%;
+    }
+
+    .Title{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+
+        span{
+            color: #727272;
+            font-size: 0.8rem;
+        }
+
+        h2{
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+    }
+
+    .ProductsGrid{
+        grid-template-columns: 25% 25% 50%;
+        
+        @media (width <= 1020px) {
+            grid-template-columns: 50% 50%;
+        }
+
+        @media (width <= 700px) {
+            grid-template-columns: 100%;
+        }
+
+        .ContainerProduct{
+            height: 100%;
+        }
+        
+        .ImageTrend50{
+            
+            @media (width <= 1020px) {
+                grid-column: span 2;
+            }
+            @media (width <= 700px) {
+                grid-column: inherit;
+            }
+
+            img{
+                width: 47%!important;
+                display: block;
+                margin: auto;
+                grid-area: auto;
+
+                @media (width <= 700px) {
+                    width: 100%!important;
+                }
+            }
+        }
+    }
+}

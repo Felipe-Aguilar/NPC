@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Yantramanav } from 'next/font/google';
-import './globals.css';
-import Header from '@/components/header/Header';
+import './globals.scss';
 import  'bootstrap/dist/css/bootstrap.css';
 
 const inter = Yantramanav({ subsets: ['latin'], weight: ["100", "300", "400", "500", "700", "900"]})
@@ -19,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
-        {/* <Header /> */}
           {children}
       </body>
     </html>

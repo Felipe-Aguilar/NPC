@@ -8,6 +8,7 @@ import News from '@/components/news/News';
 import NewProducts from '@/components/newProducts/NewProducts';
 import NewCollections from '@/components/newCollections/NewCollections';
 import SliderMarcas from '@/components/sliders/SliderMarcas';
+import Trending from '@/components/trending/Trending';
 
 
 
@@ -42,6 +43,8 @@ export default function Home() {
       <NewCollections />
 
       <SliderMarcas />
+
+      <Trending />
 
     </main>
   )
