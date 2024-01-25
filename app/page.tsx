@@ -13,6 +13,7 @@ import Trending from '@/components/trending/Trending';
 
 
 export default function Home() {
+
   return (
     <main className={styles.Main}>
       <HeaderSticky />
@@ -45,6 +46,18 @@ export default function Home() {
       <SliderMarcas />
 
       <Trending />
+
+      <div className={styles.ShopNow}>
+        <div className={styles.Text}>
+          <span>Conoce</span>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, est delectus quasi deleniti porro numquam atque quae ipsa voluptatem reprehenderit!</p>
+
+          <Link href={'/'}>
+            Compra Ahora
+          </Link>
+        </div>
+      </div>
 
     </main>
   )

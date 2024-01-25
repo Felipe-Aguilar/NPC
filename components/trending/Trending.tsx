@@ -22,42 +22,84 @@ const Trending = () => {
 
             <div className={`ProductsGrid ${styles.ProductsGrid}`}>
                 { Products.map((product)=>(
-                    <div key={product.id} className={`Border ${(product.id % 3) == 0 ? styles.ImageTrend50 : ''}`}>
-                        <div 
-                            className={`ContainerProduct ${styles.ContainerProduct}`}
-                        >
-                            <div className="Head">
-                                <div className="ButtonContainer">
-                                    <button><BsHeart /></button>
+                    product.id <= 3 && (
+                        <div key={product.id} className={`Border ${(product.id % 3) == 0 ? styles.ImageTrend50 : ''}`}>
+                            <div className={`ContainerProduct ${styles.ContainerProduct}`}>
+                                <div className="Head">
+                                    <div className="ButtonContainer">
+                                        <button><BsHeart /></button>
+                                    </div>
+                                </div>
+                                <Link href={'/'}>
+                                    <Image 
+                                        src={'/imagenes/PlayeraDemo.png'}
+                                        alt='Playera de EDM'
+                                        width={1080}
+                                        height={1080}
+                                    />
+                                </Link>
+                                <div className={`Info`}>
+                                    <Link href={'/'}>
+                                        <span>{product.category}</span>                
+                                    </Link>
+
+                                    <Link href={'/'}>
+                                        {product.name}
+                                    </Link>
+
+                                    <span>{`$ ${product.price}`}</span>
+                                </div>
+
+                                <div className={`Bag`}>
+                                    <button>
+                                        <BsBag />
+                                    </button>
                                 </div>
                             </div>
-                            <Link href={'/'}>
-                                <Image 
-                                    src={'/imagenes/PlayeraDemo.png'}
-                                    alt='Playera de EDM'
-                                    width={1080}
-                                    height={1080}
-                                />
-                            </Link>
-                            <div className={`Info`}>
+                        </div>
+                    )
+                ))
+                }
+            </div>
+            
+            <div className={`ProductsGrid ${styles.ProductsGrid} ${styles.ProductsGridReverse}`}>
+                { Products.map((product)=>(
+                    product.id > 3 && (
+                        <div key={product.id} className={`Border ${(product.id % 4) == 0 ? styles.ImageTrend50 : ''}`}>
+                            <div className={`ContainerProduct ${styles.ContainerProduct}`}>
+                                <div className="Head">
+                                    <div className="ButtonContainer">
+                                        <button><BsHeart /></button>
+                                    </div>
+                                </div>
                                 <Link href={'/'}>
-                                    <span>{product.category}</span>                
+                                    <Image 
+                                        src={'/imagenes/PlayeraDemo.png'}
+                                        alt='Playera de EDM'
+                                        width={1080}
+                                        height={1080}
+                                    />
                                 </Link>
+                                <div className={`Info`}>
+                                    <Link href={'/'}>
+                                        <span>{product.category}</span>                
+                                    </Link>
 
-                                <Link href={'/'}>
-                                    {product.name}
-                                </Link>
+                                    <Link href={'/'}>
+                                        {product.name}
+                                    </Link>
 
-                                <span>{`$ ${product.price}`}</span>
-                            </div>
+                                    <span>{`$ ${product.price}`}</span>
+                                </div>
 
-                            <div className={`Bag`}>
-                                <button>
-                                    <BsBag />
-                                </button>
+                                <div className={`Bag`}>
+                                    <button>
+                                        <BsBag />
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )
                 ))
                 }
             </div>
