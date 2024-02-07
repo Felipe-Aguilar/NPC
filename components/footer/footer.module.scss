@@ -1,0 +1,88 @@
+.Footer{
+    width: 100%;
+    background: #eeedeb;
+    
+    .Container{
+        width: 80%;
+        margin: auto;
+        padding: 60px 0;
+
+        @media (width <= 700px) {
+            width: 87%;
+            padding: 40px 0;
+        }
+
+        .Icons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 40px;
+
+            @media (width <= 700px) {
+                flex-direction: column;
+            }
+
+            img{
+                width: 100px;
+                height: auto;
+
+                @media (width <= 700px) {
+                    width: 50%;
+                    margin: auto;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+            
+            span{
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                color: #6d6d6d;
+
+                @media (width <= 700px) {
+                    font-size: 0.8rem;
+                }
+            }
+            
+        }
+
+        .Information{
+            border-top: 1px solid #d9d9d9;
+            padding: 40px 0;
+            display: flex;
+            gap: 200px;
+
+            @media (width <= 700px) {
+                justify-content: space-between;
+                gap: 0;
+                text-align: center;
+            }
+
+            h5{
+                font-weight: 900;
+                text-transform: uppercase;
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+            ul{
+                padding: 0;
+                li{
+                    list-style: none;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size: 13px;
+                    margin: 0 0 15px;
+
+                    a{
+                        transition: all 0.3s ease;
+                        border-bottom: 2px solid transparent;
+
+                        &:hover{
+                            border-bottom: 2px solid #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
