@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from './footer.module.scss';
 import Image from 'next/image';
+import { BsFacebook, BsInstagram } from 'react-icons/bs';
 
 const Footer = () => {
 
@@ -64,6 +65,27 @@ const Footer = () => {
                             }
                         </ul>
                     </div>
+
+                    <div className={styles.social}>
+                        <h5>Nuestras redes sociales</h5>
+                        <div className={styles.icons}>
+                            <a href="https://www.facebook.com/profile.php?id=61550846452286" target='_blank'>
+                                <BsFacebook />
+                            </a>
+                            <a href="https://www.instagram.com/npc.619/" target='_blank'>
+                                <BsInstagram />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.socialMobile}>
+                    <a href="https://www.facebook.com/profile.php?id=61550846452286" target='_blank'>
+                        <BsFacebook />
+                    </a>
+                    <a href="https://www.instagram.com/npc.619/" target='_blank'>
+                        <BsInstagram />
+                    </a>
                 </div>
             </div>
         </footer>

@@ -43,7 +43,7 @@ const MenuMobile = () => {
                         <Link href={'/'}>
                             Tienda
                         </Link>
-                        <Link href={'/'}>
+                        <Link href={'/blog'}>
                             Blog
                         </Link>
                         <Link href={'/'}>

@@ -105,4 +105,12 @@
             }
         }
     }
+
+    nav{
+        a{
+            &:hover{
+                border-color: #000;
+            }
+        }
+    }
 }

@@ -48,9 +48,18 @@
 
         .Information{
             border-top: 1px solid #d9d9d9;
-            padding: 40px 0;
+            padding: 40px 0 0 0;
             display: flex;
             gap: 200px;
+
+            @media (width <= 1200px) {
+                justify-content: space-between;
+                gap: 0px;
+            }
+
+            @media (width <= 800px) {
+                padding: 40px 0;
+            }
 
             @media (width <= 700px) {
                 justify-content: space-between;
@@ -83,6 +92,35 @@
                     }
                 }
             }
+            .social{
+                @media (width <= 800px) {
+                    display: none;
+                }
+                
+                .icons{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+
+                    svg{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        .socialMobile{
+            display: none;
+
+            @media (width <= 800px) {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+    
+                svg{
+                    font-size: 1.5rem;
+                }
+            }
+
         }
     }
 }

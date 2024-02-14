@@ -25,7 +25,7 @@ const Header = () => {
                 <Link href={'#'}>
                     Contacto
                 </Link>
-                <Link href={'#'}>
+                <Link href={'/blog'}>
                     Blog
                 </Link>
             </nav>
