@@ -6,12 +6,9 @@ export default function BlogLayout({children}: {
     children: React.ReactNode;
 }) {
     return (
-        <>
-            <Header />
-            <div className={styles.Blog}>
-                {children}
-                <RightSidebar />
-            </div>
-        </>
+        <div className={styles.Blog}>
+            {children}
+            <RightSidebar />
+        </div>
     );
 }
