@@ -16,7 +16,7 @@ const RightSidebar = () => {
 
             <div className={styles.ContainerPosts}>
                 { relatedPost.map((post)=>(
-                    <div className={styles.Post}>
+                    <div key={post.id} className={styles.Post}>
                         <Link href={post.link}>
                             <Image 
                                 src={post.image}
