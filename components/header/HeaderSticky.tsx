@@ -12,7 +12,7 @@ const HeaderSticky = () => {
                 <Image 
                     width={80}
                     height={80}
-                    src={'imagenes/Logotipo NPC blanco.svg'}
+                    src={'/imagenes/Logotipo NPC blanco.svg'}
                     alt="NPC Logotipo oficial - Playeras de música electrónica y Dj's"
                 />
             </Link>
