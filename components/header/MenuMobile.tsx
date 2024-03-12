@@ -46,7 +46,7 @@ const MenuMobile = () => {
                         <Link href={'/blog'}>
                             Blog
                         </Link>
-                        <Link href={'/'}>
+                        <Link href={'/contacto'}>
                             Contacto
                         </Link>
                     </motion.div>

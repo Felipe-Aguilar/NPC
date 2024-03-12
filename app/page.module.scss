@@ -117,3 +117,32 @@
         }
     }
 }
+
+.NotFound{
+    min-height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img{
+        width: 400px;
+        height: auto;
+
+        @media (width <= 700px) {
+            width: 350px;
+        }
+        @media (width <= 600px) {
+            width: 70%;
+        }
+    }
+    h1,a{
+        text-align: center;
+    }
+    h1{
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 40px;
+        font-size: 1.5rem;
+    }
+}

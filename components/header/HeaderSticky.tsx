@@ -21,7 +21,7 @@ const HeaderSticky = () => {
                 <Link href={'#'}>
                     Tienda
                 </Link>
-                <Link href={'#'}>
+                <Link href={'/contacto'}>
                     Contacto
                 </Link>
                 <Link href={'/blog'}>

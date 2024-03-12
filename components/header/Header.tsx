@@ -22,7 +22,7 @@ const Header = () => {
                 <Link href={'#'}>
                     Tienda
                 </Link>
-                <Link href={'#'}>
+                <Link href={'/contacto'}>
                     Contacto
                 </Link>
                 <Link href={'/blog'}>
