@@ -2,6 +2,12 @@ import styles from './blog.module.scss';
 import Image from "next/image";
 import Link from "next/link";
 
+
+export const metadata = {
+    title: 'Blog - NPC',
+    description: 'Blog - NPC',
+};
+
 const Blog = () => {
 
     const blogs = [

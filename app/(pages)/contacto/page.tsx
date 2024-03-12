@@ -1,6 +1,13 @@
 import styles from './contact.module.scss';
 import { BsEnvelope, BsWhatsapp } from 'react-icons/bs';
 
+
+
+export const metadata = {
+    title: 'Contacto - NPC',
+    description: 'Contacto - NPC',
+};
+
 const ContactPage = () => {
 
     const contactType = [
